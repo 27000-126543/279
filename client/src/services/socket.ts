@@ -44,6 +44,18 @@ class SocketService {
       this.socket.on('trade_complete', (data: any) => {
         this.emit('trade_complete', data);
       });
+
+      this.socket.on('station_update', (data: any) => {
+        this.emit('station_update', data);
+      });
+
+      this.socket.on('headline', (data: any) => {
+        this.emit('headline', data);
+      });
+
+      this.socket.on('random_event', (data: any) => {
+        this.emit('random_event', data);
+      });
     }
     return this.socket;
   }
